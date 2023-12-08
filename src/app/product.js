@@ -87,7 +87,7 @@ export const productListHandler = (event) => {
             ];
         } else {
             const lastCartPosition = document.querySelector(".cart-item:last-child")?.getBoundingClientRect();
-            const aniTop = lastCartPosition ? lastCartPosition.top + 10 : cartBody.getBoundingClientRect().top;
+            const aniBottom = lastCartPosition ? lastCartPosition.bottom : cartBody.getBoundingClientRect().top;
             const aniLeft = lastCartPosition ? lastCartPosition.left + 10 : cartBody.getBoundingClientRect().left;
             console.log(cartBody.getBoundingClientRect());
             keyframe = [
@@ -96,7 +96,7 @@ export const productListHandler = (event) => {
                     left: currentImgPosition.left + "px"
                 },
                 {
-                    top: aniTop + "px",
+                    top: aniBottom + "px",
                     left: aniLeft + "px",
                     height: 10 + "px",
                     rotate: "2turn",

@@ -16,6 +16,8 @@ export const categoryRender =(categoryArray) => {
 }
 export const categoryHandler =(event) => {
     if(event.target.classList.contains("category-btn")){
+        // event.target.classList.add("bg-neutral-600")
+        // event.target.classList.add("text-white")
         const currentCategory = event.target.innerText;
         const currentProduct = products.filter(product => product.category == currentCategory || currentCategory == "All")
         // console.log(currentProduct);
@@ -23,6 +25,7 @@ export const categoryHandler =(event) => {
         if(currentCategory=="All"){
             productCardRender(products)
         }else {
+            
             productCardRender(currentProduct)
         }
     }
