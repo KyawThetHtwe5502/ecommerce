@@ -87,7 +87,7 @@ export const productListHandler = (event) => {
             ];
         } else {
             const lastCartPosition = document.querySelector(".cart-item:last-child")?.getBoundingClientRect();
-            const aniBottom = lastCartPosition ? lastCartPosition.bottom : cartBody.getBoundingClientRect().top;
+            const aniBottom = lastCartPosition ? lastCartPosition.bottom + 10 : cartBody.getBoundingClientRect().top;
             const aniLeft = lastCartPosition ? lastCartPosition.left + 10 : cartBody.getBoundingClientRect().left;
             console.log(cartBody.getBoundingClientRect());
             keyframe = [
